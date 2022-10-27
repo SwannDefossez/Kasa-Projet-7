@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as *;
+@use '../abstracts/breakpoints' as * ;
+.header {
+  @include flex(row, space-between, center);
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  &__logo {
+    @include flex(row, flex-start, flex-end);
+    gap: 0.2rem;
+    width: 100%;
+  }
+  &__nav {
+    @include flex(row, space-between, center);
+    gap: 1rem;
+    @include lg {
+      gap: 3rem;
+    }
+  }
+}

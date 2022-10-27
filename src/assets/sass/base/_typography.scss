@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as *;
+
+body {
+  font-family: "Montserrat";
+  font-size: 22px;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+}
+
+.header {
+  color: $color-primary;
+  &__nav {
+    font-size: 15px;
+    text-transform: uppercase;
+    @include sm {
+      text-transform: none;
+      font-size: 25px;
+    }
+  }
+}
+
+.footer {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+.banner {
+  &__h2 {
+    font-size: 18px;
+    color: white;
+
+    @include sm {
+      font-size: 25px;
+    }
+
+    @include md {
+      font-size: 36px;
+    }
+
+    @include xxl {
+      font-size: 48px;
+    }
+  }
+}
+
+.gallery {
+  &__card {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.error {
+  &__h3 {
+    font-size: 36px;
+    color: $color-primary;
+  }
+  &__link {
+    text-decoration: underline;
+  }
+}
+
+
+.active-link {
+  text-decoration: underline;
+}

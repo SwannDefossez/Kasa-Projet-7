@@ -1,0 +1,15 @@
+@use "../abstracts/mixins" as * ;
+@use "../abstracts/breakpoints" as * ;
+
+
+
+.error {
+    @include flex(column,center,center);
+    margin-top: 5%;
+    &__h3 {
+        margin-top: 5%;
+    }
+    &__link {
+        margin-top: 15%;
+    }
+}

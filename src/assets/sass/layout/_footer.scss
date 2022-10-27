@@ -1,0 +1,10 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
+
+.footer {
+  margin-top: auto;
+  background-color: black;
+  height: 10rem;
+  @include flex(column, center, center);
+  gap: 10%;
+}
