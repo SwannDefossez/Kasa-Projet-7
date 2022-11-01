@@ -75,8 +75,34 @@ a {
   &__h3 {
     color: $color-primary;
   }
-  &__label {
-    background-color: $color-primary;
-    color: white;
+}
+.toggle {
+  color: white;
+}
+
+
+//page Logement
+
+.info {
+  color: $color-primary;
+  &__h1 {
+    font-size: 25px;
+    font-weight: bold;
   }
+  &__h3 {
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+}
+
+.tag {
+  background-color: $color-primary;
+  color: white;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.grey {
+  color: #E3E3E3;
 }

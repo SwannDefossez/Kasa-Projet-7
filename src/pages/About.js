@@ -1,19 +1,28 @@
 import React from "react";
 import CollapseList from "../components/CollapseList";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const About = () => {
   return (
     <div>
       <Header />
-      <section className="banner" >
+      <section className="mobileBanner">
+        <img
+          src={require("../assets/images/aboutbanner.webp")}
+          alt="Paysage"
+          className="mobileBanner__img"
+        />
+      </section>
+      <section className="desktopBanner">
         <img
           src={require("../assets/images/about.webp")}
           alt="Paysage"
-          className="banner__img"
+          className="desktopBanner__img"
         />
-          </section>
-          <CollapseList />
+      </section>
+      <CollapseList />
+      <Footer />
     </div>
   );
 };

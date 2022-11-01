@@ -1,28 +1,72 @@
-@use "../abstracts/variables" as * ;
-@use "../abstracts/mixins" as * ;
-@use "../abstracts/breakpoints" as * ;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
 
-.list {
- @include flex(column,center,center)
+.mobileBanner {
+  @include flex(row, center, center);
+  margin-top: 4%;
+  width: 100%;
+  @include md {
+    display: none;
+  }
+  &__img {
+    width: 80%;
+  }
+}
+.desktopBanner {
+  margin-top: 4%;
+  width: 100%;
+  display: none;
+  @include md {
+    @include flex(row, center, center);
+  }
+  &__img {
+    width: 80%;
+  }
 }
 
-.accordeon {
-    margin-top: 2rem;
-    width: 80%;
-    
+.list {
+  @include flex(column, center, center);
+  margin-bottom: 10rem;
+}
+
+.toggle {
+  @include flex(row, space-between, center);
+  background-color: $color-primary;
+  border: unset;
+  cursor: pointer;
+  font: unset;
+  padding: 1rem;
+  border-radius: 0.75rem;
 }
 
 .collapse {
-    margin-bottom: 2rem;
-    background-color: $color-secondary ;
-    border-radius: 0.75rem;
-    &__h3 {
-        margin-top: 1rem;
-        padding: 1rem;
+  @include flex(column, center, center);
+  margin-top: 2rem;
+  width: 80%;
+  &__label {
+    z-index: 51;
+    width: 100%;
+    @include lg {
+      width: 70%;
     }
-    &__label {
-        @include flex(row,space-between,center);
-        padding: 1rem;
-        border-radius: 0.75rem;
-    }
+  }
+}
+
+.content {
+  background-color: $color-secondary;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+.content-parent {
+  margin-top: -1rem;
+  height: 0px;
+  overflow: hidden;
+  transition: height ease 0.3s;
+  z-index: 50;
+  @include lg {
+    width: 70%;
+  }
 }
