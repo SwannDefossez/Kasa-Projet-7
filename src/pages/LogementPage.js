@@ -1,18 +1,31 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate , useParams } from "react-router-dom";
+
 import Header from "../components/Header";
 import Slideshow from "../components/Slideshow";
 import Logement from "../models/logements.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-
+import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
+import { useEffect } from "react";
 const LogementPage = () => {
+
+  // récupération de l'id
   const logement = useParams();
   const logementId = logement.id;
   const selectedLogement = Logement.find((e) => e.id === logementId);
+
+  // redirection si l'id n'est pas bon
+  if (!selectedLogement) {
+    return <Navigate to="/error" />;
+  }
+
   const tag = selectedLogement.tags;
   const rating = Number(selectedLogement.rating);
   const numbers = [1, 2, 3, 4, 5];
+  const equipments = selectedLogement.equipments;
+
   return (
     <div>
       <Header />
@@ -52,6 +65,19 @@ const LogementPage = () => {
           </div>
         </div>
       </section>
+      <section className="logement__collapse">
+        <Collapse label="Description">
+          <h3 className="collapse__h3">{selectedLogement.description}</h3>
+        </Collapse>
+        <Collapse label="Équipements">
+          <ul className="collapse__ul">
+            {equipments.map((equipment) => (
+              <li key={equipment} className="collapse__h3">{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
+      </section>
+      <Footer />
     </div>
   );
 };

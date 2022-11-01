@@ -25,7 +25,7 @@ const Slideshow = ({ logement }) => {
       <h4
         className={picturesData.length === 1 ? "slider__h4 none" : "slider__h4"}
       >
-        {current + "/" + picturesData.length}
+        {current+1 + "/" + picturesData.length}
       </h4>
       <FontAwesomeIcon
         icon={faChevronLeft}
