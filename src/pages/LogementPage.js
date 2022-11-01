@@ -14,7 +14,6 @@ const LogementPage = () => {
     return (
         <div>
             <Header />
-            {selectedLogement.title}
             <img src={selectedLogement.cover} alt="" className='gallery__card__img' />
 
         </div>

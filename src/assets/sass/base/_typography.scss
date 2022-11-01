@@ -65,7 +65,18 @@ a {
   }
 }
 
-
 .active-link {
   text-decoration: underline;
+}
+
+// page "à propos"
+
+.collapse {
+  &__h3 {
+    color: $color-primary;
+  }
+  &__label {
+    background-color: $color-primary;
+    color: white;
+  }
 }

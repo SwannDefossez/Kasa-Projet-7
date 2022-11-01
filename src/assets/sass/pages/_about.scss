@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as * ;
+@use "../abstracts/mixins" as * ;
+@use "../abstracts/breakpoints" as * ;
+
+.list {
+ @include flex(column,center,center)
+}
+
+.accordeon {
+    margin-top: 2rem;
+    width: 80%;
+    
+}
+
+.collapse {
+    margin-bottom: 2rem;
+    background-color: $color-secondary ;
+    border-radius: 0.75rem;
+    &__h3 {
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+    &__label {
+        @include flex(row,space-between,center);
+        padding: 1rem;
+        border-radius: 0.75rem;
+    }
+}

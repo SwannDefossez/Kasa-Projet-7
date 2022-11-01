@@ -1,5 +1,7 @@
 @use "../abstracts/mixins" as *;
 @use '../abstracts/breakpoints' as * ;
+@use "../abstracts/variables" as * ;
+
 .header {
   @include flex(row, space-between, center);
   margin-top: 2%;
@@ -8,11 +10,17 @@
   &__logo {
     @include flex(row, flex-start, flex-end);
     gap: 0.2rem;
-    width: 100%;
+    &__img {
+      width: 75%;
+      @include md {
+        width: 100%;
+      }
+    }
   }
   &__nav {
     @include flex(row, space-between, center);
     gap: 1rem;
+    white-space: nowrap;
     @include lg {
       gap: 3rem;
     }
