@@ -6,6 +6,7 @@ import Header from "../components/Header";
 const About = () => {
   return (
     <div>
+    <div className="globalMargin">
       <Header />
       <section className="mobileBanner">
         <img
@@ -22,6 +23,8 @@ const About = () => {
         />
       </section>
       <CollapseList />
+      
+      </div>
       <Footer />
     </div>
   );

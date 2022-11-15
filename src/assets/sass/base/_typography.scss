@@ -59,9 +59,11 @@ a {
   &__h3 {
     font-size: 36px;
     color: $color-primary;
+    text-align: center;
   }
   &__link {
     text-decoration: underline;
+    text-align: center;
   }
 }
 

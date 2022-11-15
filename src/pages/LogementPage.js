@@ -27,7 +27,8 @@ const LogementPage = () => {
   const equipments = selectedLogement.equipments;
 
   return (
-    <div>
+    <div >
+      <div className="globalMargin">
       <Header />
       <Slideshow logement={selectedLogement} />
       <section className="info">
@@ -76,7 +77,8 @@ const LogementPage = () => {
             ))}
           </ul>
         </Collapse>
-      </section>
+        </section>
+        </div>
       <Footer />
     </div>
   );

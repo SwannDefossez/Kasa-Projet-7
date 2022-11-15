@@ -1,15 +1,30 @@
-@use "../abstracts/mixins" as * ;
-@use "../abstracts/breakpoints" as * ;
-
-
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
 
 .error {
-    @include flex(column,center,center);
-    margin-top: 5%;
-    &__h3 {
-        margin-top: 5%;
+  @include flex(column, center, center);
+    margin-top: 10rem;
+    @include lg {
+        margin-top: 7rem;
     }
-    &__link {
-        margin-top: 15%;
+  &__h3 {
+    margin-top: 1.5rem;
+    font-size: 22px;
+    font-weight: bold;
+    @include lg {
+        margin-top: 4rem;
     }
+  }
+  &__link {
+    margin-top: 10rem;
+    @include lg {
+        margin-top: 8rem;
+    }
+  }
+  &__img {
+    width: 75%;
+    @include lg {
+        width: 50%;
+    }
+  }
 }

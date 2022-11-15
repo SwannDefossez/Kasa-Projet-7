@@ -2,25 +2,27 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/breakpoints" as *;
 
+.globalMargin {
+  margin: 0% 12.5% 0% 12.5%;
+}
+
 .banner {
   @include flex(row, center, center);
   position: relative;
   text-align: center;
-  margin-top: 4%;
-  width: 100%;
+  margin: 4% 0% 8% 0%;
   &__h2 {
     position: absolute;
   }
   &__img {
-    width: 80%;
+    width: 100%;
   }
 }
 
 .gallery {
-  margin: 10%;
   @include flex(row, center, center);
   flex-wrap: wrap;
-
+  margin-bottom: 10%;
   border-radius: 25px;
   gap: 5%;
 

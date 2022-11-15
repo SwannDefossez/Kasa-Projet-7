@@ -5,8 +5,6 @@
 .slider {
   @include flex(row, center, center);
   position: relative;
-  width: 80%;
-  margin-left: 10%;
   margin-top: 2rem;
   height: 300px;
   overflow: hidden;
@@ -34,6 +32,12 @@
     color: white;
     bottom: 1rem;
     z-index: 10;
+  }
+  &__img {
+    @include xxl {
+      width: 85rem;
+    }
+    object-fit: cover;
   }
 }
 
@@ -119,15 +123,10 @@
 }
 
 .logement__collapse {
-  @include flex(column, center, flex-start);
+  @include flex(column, center, stretch);
   gap: 2rem;
   margin-bottom: 15rem;
   @include md {
     @include flex(row, center, center);
-  }
-}
-.collapse {
-  &__h3 {
-    padding: 0.8rem;
   }
 }

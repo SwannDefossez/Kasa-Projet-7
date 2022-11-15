@@ -5,12 +5,11 @@
 .mobileBanner {
   @include flex(row, center, center);
   margin-top: 4%;
-  width: 100%;
   @include md {
     display: none;
   }
   &__img {
-    width: 80%;
+    width: 100%;
   }
 }
 .desktopBanner {
@@ -21,11 +20,16 @@
     @include flex(row, center, center);
   }
   &__img {
-    width: 80%;
+    width: 100%;
   }
 }
 
 .list {
   @include flex(column, center, center);
   margin-bottom: 10rem;
+  width: 100%;
+  @include lg {
+    width: 80%;
+    margin-left: 10%;
+  }
 }

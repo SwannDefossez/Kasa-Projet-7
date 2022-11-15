@@ -3,7 +3,7 @@ import Collapse from "./Collapse";
 const CollapseList = () => {
   return (
     <div className="list">
-      <Collapse label="Fiabilité">
+      <Collapse label="Fiabilité" className="test">
         <h3 className="collapse__h3">
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les
           photos sont conformes aux logements, et toutes les informations sont

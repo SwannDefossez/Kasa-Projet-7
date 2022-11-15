@@ -5,8 +5,6 @@
 .header {
   @include flex(row, space-between, center);
   margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
   &__logo {
     @include flex(row, flex-start, flex-end);
     gap: 0.2rem;
