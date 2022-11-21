@@ -2,9 +2,9 @@ import React from 'react';
 import Card from "./Card";
 import Logement from "../models/logements.json";
 
-const Gallery = () => {
+const CardList = () => {
     return (
-        <section className='gallery'>
+        <section className='CardList'>
             {
                 Logement.map((logement , index) => {
                     return (
@@ -17,4 +17,4 @@ const Gallery = () => {
     );
 };
 
-export default Gallery;
+export default CardList;

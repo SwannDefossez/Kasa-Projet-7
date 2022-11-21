@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Gallery from "../components/Gallery";
+import CardList from "../components/CardList";
 import Header from "../components/Header";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
           className="banner__img"
         />
       </section>
-      <Gallery />
+      <CardList />
       </div>
       <Footer />
     </div>

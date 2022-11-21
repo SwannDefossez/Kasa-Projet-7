@@ -4,8 +4,10 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Collapse = (props) => {
+  
   const [isOpen, setIsOpen] = useState(false);
   const parentRef = useRef();
+
   return (
     <div className="collapse">
       <span className="collapse__label">
