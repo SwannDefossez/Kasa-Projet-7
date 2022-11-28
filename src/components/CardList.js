@@ -7,8 +7,7 @@ const CardList = () => {
         <section className='CardList'>
             {
                 Logement.map((logement , index) => {
-                    return (
-                        
+                    return (  
                         <Card key={index} logement={logement} no={index} />
                     )
                 })
