@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import Up from "../assets/images/up.png"
+import Down from "../assets/images/down.png"
 
 const Collapse = (props) => {
   
@@ -14,9 +13,9 @@ const Collapse = (props) => {
         <div className="toggle" onClick={() => setIsOpen(!isOpen)}>
           {props.label}
           {isOpen === true ? (
-            <FontAwesomeIcon icon={faChevronDown} />
+            <img src={Up} />
           ) : (
-            <FontAwesomeIcon icon={faChevronUp} />
+            <img src={Down} />
           )}
         </div>
       </span>

@@ -1,9 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-
+import Chevron from "../assets/images/chevron.png";
 const Slideshow = ({ logement }) => {
   const [current, setCurrent] = useState(0);
   const picturesData = logement.pictures;
@@ -20,24 +17,29 @@ const Slideshow = ({ logement }) => {
   if (!Array.isArray(picturesData) || picturesData.length <= 0) {
     return null;
   }
+
   return (
     <section className="slider">
       <h4
         className={picturesData.length === 1 ? "slider__h4 none" : "slider__h4"}
       >
-        {current+1 + "/" + picturesData.length}
+        {current + 1 + "/" + picturesData.length}
       </h4>
-      <FontAwesomeIcon
-        icon={faChevronLeft}
+      <img
+        src={Chevron}
+        alt="Left"
         className={
-          picturesData.length === 1 ? "slider__left none" : "slider__left"
+          picturesData.length === 1 ? "slider__left none" : "slider__left "
         }
         onClick={prevSlide}
       />
-      <FontAwesomeIcon
-        icon={faChevronRight}
+      <img
+        src={Chevron}
+        alt="Right"
         className={
-          picturesData.length === 1 ? "slider__right none" : "slider__right"
+          picturesData.length === 1
+            ? "slider__right none"
+            : "slider__right rotate"
         }
         onClick={nextSlide}
       />

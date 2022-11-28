@@ -82,7 +82,6 @@ a {
   color: white;
 }
 
-
 //page Logement
 
 .info {
@@ -94,7 +93,6 @@ a {
   &__h3 {
     font-size: 20px;
     font-weight: bold;
-
   }
 }
 
@@ -106,5 +104,9 @@ a {
 }
 
 .grey {
-  color: #E3E3E3;
+  filter: grayscale(1) brightness(150%);
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
